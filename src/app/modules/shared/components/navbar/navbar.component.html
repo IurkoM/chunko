@@ -1,12 +1,17 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar color="accent">
+    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="secciones">
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #secciones="matMenu">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item [matMenuTriggerFor]="producto">Menu</button>
+    </mat-menu>
+
     <span>My App</span>
     <!--Boton para ir al inicio-->
-    <button mat-button routerLink="/inicio">Inicio</button>
+    <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
     <!--BOTON DESPLEGABLE-->
-    <button mat-button [matMenuTriggerFor]="producto">Menu</button>
+    <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Menu</button>
 <mat-menu #producto="matMenu">
   <button mat-menu-item routerLink="producto">General</button>
   <button mat-menu-item routerLink="accesorio">Accesorios</button>
@@ -25,7 +30,7 @@
 </mat-menu>
   
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+      <mat-icon>shopping_cart</mat-icon>
     </button>
   </mat-toolbar>
   
