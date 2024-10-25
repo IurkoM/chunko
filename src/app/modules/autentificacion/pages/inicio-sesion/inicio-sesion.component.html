@@ -1,0 +1,13 @@
+<body>
+  
+<form class="form container"> 
+    <span id="login-lable">Acceder</span> 
+    <input [(ngModel)]="usuarioIngresado.email" class="input" type="text" placeholder="E-Mail" required> 
+    <input [(ngModel)]="usuarioIngresado.password" [type]="hide  ? 'password' : 'text'" class="input" type="text" placeholder="Contraseña" minlength="8" maxlength="15" required>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    <button id="btn" (click)="iniciarSesion()">Iniciar</button> 
+</form>
+
+</body>

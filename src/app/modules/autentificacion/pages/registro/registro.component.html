@@ -1,0 +1,16 @@
+<body>
+  
+<form class="form container"> 
+  <span id="login-lable">Registrarse</span>
+  <input [(ngModel)]="usuarios.nombre" class="input" type="text" placeholder="Nombre" required> 
+  <input [(ngModel)]="usuarios.apellido" class="input" type="text" placeholder="Apellido" required> 
+  <input [(ngModel)]="usuarios.email" class="input" type="text" placeholder="E-Mail" required> 
+  <input [(ngModel)]="usuarios.password" [type]="hide  ? 'password' : 'text'" class="input" type="text" placeholder="Contraseña" minlength="8" maxlength="15" required>
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  <button id="btn" (click)="registrar()">Iniciar</button> 
+</form>
+
+</body>
+

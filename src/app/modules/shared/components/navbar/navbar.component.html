@@ -1,0 +1,67 @@
+<mat-toolbar class="custom-toolbar">
+  <div style="margin: 0 auto;" class="rainbow-text moving-text">Ventas solo en Argentina</div>
+  <div style="margin: 0 auto;" class="rainbow-text moving-text">Ventas solo en Argentina</div>
+  <div style="margin: 0 auto;" class="rainbow-text moving-text">Ventas solo en Argentina</div>
+  <div style="margin: 0 auto;" class="rainbow-text moving-text">Ventas solo en Argentina</div>
+</mat-toolbar>
+
+
+
+<mat-toolbar>
+    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="secciones">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #secciones="matMenu">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item [matMenuTriggerFor]="producto">Menu</button>
+      <button mat-menu-item [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+    </mat-menu>
+
+    <div>
+      <img src="../../../../../assets/Logo-fotor-bg-remover-2024090684342.png" width="80px">
+    </div>
+
+    <span class="example-spacer fuente">NBITA VIBES</span>
+    <!--Boton para ir al inicio-->
+    <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Generos</button>
+<mat-menu #producto="matMenu">
+  <button mat-menu-item routerLink="">Rock Nacional</button>
+  <button mat-menu-item routerLink="">POP</button>
+  <button mat-menu-item routerLink="">HIP-HOP</button>
+  <button mat-menu-item routerLink="">RAP</button>
+  <button mat-menu-item routerLink="">CUMBIA</button>
+</mat-menu>
+    <div>
+    <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
+    </div>
+    <!--BOTON DESPLEGABLE-->
+    <button id="menuMusica" mat-button [matMenuTriggerFor]="musica">Musica</button>
+<mat-menu #musica="matMenu">
+  <button mat-menu-item routerLink="">CD</button>
+  <button mat-menu-item routerLink="">DVD</button>
+  <button mat-menu-item routerLink="">VINILO</button>
+</mat-menu>
+
+
+
+    <span class="example-spacer"></span>
+<!-- Inicio de sesion y formulario de registro-->
+    <button id="menuInicioSesion" mat-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+<mat-menu #usuario="matMenu">
+  <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
+  <button mat-menu-item (click)="iniciar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar sesion</button>
+  <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesion</button>
+</mat-menu>
+  
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>local_mall</mat-icon>
+    </button>
+
+
+    <!--Label para modo oscuro-->
+<label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+<input type="checkbox" id="toggle" (click)="cambiarFondo()">
+
+  </mat-toolbar>
+    
