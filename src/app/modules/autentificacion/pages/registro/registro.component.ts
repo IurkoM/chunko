@@ -95,7 +95,7 @@ export class RegistroComponent {
 
     this.usuarios.uid = uid
 
-
+this.guardarUsuario()
 
     //se envia la nueva informacion como un nuevo objeto a la coleccion de usuarios
 

@@ -1,0 +1,27 @@
+.conteiner{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.alinietor{
+    text-align: center;
+}
+
+.contenido{
+    width: 230px;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+p{
+    padding: 5px;
+}
+mat-card{
+    background-color: rgb(71, 235, 22);
+}
+.aliniador{
+    text-align: center;
+}

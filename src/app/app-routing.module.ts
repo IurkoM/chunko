@@ -2,11 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
 import { NavbarComponent } from './modules/shared/components/navbar/navbar.component';
+import { SoporteComponent } from './modules/shared/components/soporte/soporte.component';
+import { NosotrosComponent } from './modules/shared/components/nosotros/nosotros.component';
 
 const routes: Routes = [
   // Ruta comun -> componente
   {
     path:"",component:InicioComponent
+  },
+  {
+    path:"soporte",component:SoporteComponent
+  },
+  {
+    path:"nosotros",component:NosotrosComponent
   },
   {
     path:"",component:NavbarComponent
@@ -26,7 +34,10 @@ const routes: Routes = [
   },
   {
     path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)
-  }
+  },
+  {
+    path:"",loadChildren:()=>import('./modules/carrito/carrito.module').then(m=>m.CarritoModule)
+  },
 ];
 
 @NgModule({

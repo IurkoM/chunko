@@ -1,16 +1,40 @@
 <body>
   
-<form class="form container"> 
-  <span id="login-lable">Registrarse</span>
-  <input [(ngModel)]="usuarios.nombre" class="input" type="text" placeholder="Nombre" required> 
-  <input [(ngModel)]="usuarios.apellido" class="input" type="text" placeholder="Apellido" required> 
-  <input [(ngModel)]="usuarios.email" class="input" type="text" placeholder="E-Mail" required> 
-  <input [(ngModel)]="usuarios.password" [type]="hide  ? 'password' : 'text'" class="input" type="text" placeholder="Contraseña" minlength="8" maxlength="15" required>
-  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  <button id="btn" (click)="registrar()">Iniciar</button> 
-</form>
+<div class="form container">
+  <div class="row">
+      <h1 id="login-lable">Registrate</h1>
+      <!-- Nombre de usuario -->
+      <mat-form-field appearance="fill">
+          <mat-label>Ingrese un nombre de usuario:</mat-label>
+          <!-- ngModel = directiva BIDIRECCIONAL utilizada para formularios -->
+          <input class="input" [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Pepito" required>
+      </mat-form-field>
+
+      <!-- Apellido de usuario -->
+      <mat-form-field appearance="fill">
+          <mat-label>Ingrese su apellido:</mat-label>
+          <input class="input" [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Peréz" required>
+      </mat-form-field>
+
+      <!-- Email de usuario -->
+      <mat-form-field appearance="fill">
+          <mat-label>Ingrese su email:</mat-label>
+          <input class="input" [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepitoperez2022@gmail.com" required>
+      </mat-form-field>
+
+      <!-- Contraseña de usuario -->
+      <mat-form-field>
+          <mat-label>Ingrese su contraseña:</mat-label>
+          <input class="input" [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-hint align="start">Mínimo:6/{{input.value.length}}</mat-hint>
+      </mat-form-field>
+
+      <!-- Botón para ENVIAR la información a la Base de Datos-->
+      <button id="btn" class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+  </div>
+</div>
 
 </body>
-

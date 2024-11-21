@@ -8,12 +8,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import {MatMenuModule} from '@angular/material/menu';
+import { SoporteComponent } from './components/soporte/soporte.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SoporteComponent,
+    NosotrosComponent,
   ],
   imports: [
     CommonModule,

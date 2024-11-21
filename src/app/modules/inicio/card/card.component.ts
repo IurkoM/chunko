@@ -12,7 +12,7 @@ export class CardComponent {
   constructor() {
     this.info = [
       {
-        id: "1",
+        id: "70.000",
         nombre: "Thriller",
         alt: "Michel Jackson",
         lanzamiento:  1982,
@@ -21,7 +21,7 @@ export class CardComponent {
         imagen: "https://colectivosonoro.com/wp-content/uploads/2016/11/michael-jackson.jpeg",
       },
       {
-        id: "2",
+        id: "20.000",
         nombre: "Song Machine",
         alt: "Gorillaz",
         lanzamiento:  2020,
@@ -30,7 +30,7 @@ export class CardComponent {
         imagen: "https://indiehoy.com/wp-content/uploads/2020/11/Gorillaz-song-machine.jpg",
       },
       {
-        id: "3",
+        id: "15.000",
         nombre: "Oktubre",
         alt: "Redonditos de Ricota",
         lanzamiento: 1986,
@@ -39,7 +39,7 @@ export class CardComponent {
         imagen: "https://www.cmtv.com.ar/tapas-cd/redondosoktubre.webp",
       },
       {
-        id: "4",
+        id: "30.000",
         nombre: "Civilizacion",
         alt: "Los Piojos",
         lanzamiento: 2007,
@@ -48,7 +48,7 @@ export class CardComponent {
         imagen: "https://i.scdn.co/image/ab67616d0000b2738ef0a8bde9750f9f219495d0",
       },
       {
-        id: "5",
+        id: "15.000",
         nombre: "Señales",
         alt: "Callegeros",
         lanzamiento: 2006,
